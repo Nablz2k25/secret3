@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 A Magical Birthday Celebration 🎀</title>
+
+    <!-- Font Lettering -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0; padding:0; background:#ffe0ef; font-family:'Segoe UI', sans-serif; color:#d23c7b; overflow-x:hidden;">
+
+    <!-- Ribbon Header -->
+    <div style="
+        width:100%; height:120px; background:linear-gradient(90deg, #ff9ec4, #ffb6dd, #ff97d2);
+        display:flex; justify-content:center; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;
+    ">
+        <div style="
+            position:absolute; width:50px; height:50px; background:#ffb6dd; border-radius:50%; top:35px; left:15px;
+        "></div>
+        <div style="
+            position:absolute; width:50px; height:50px; background:#ffb6dd; border-radius:50%; top:35px; right:15px;
+        "></div>
+        <h1 style="
+            color:white; font-size:36px; font-family:'Pacifico', cursive; text-align:center;
+            text-shadow:0 3px 6px rgba(255,78,157,0.6);
+        ">🎀 A Magical Birthday Celebration 🎀</h1>
+    </div>
+
+    <!-- Konten -->
+    <div style="padding:20px; text-align:center;">
+        <div style="
+            background:white; padding:25px 20px; border-radius:20px; margin:20px auto; max-width:90%;
+            border:3px solid #ffc6e3; box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+            <h2 style="font-size:28px; color:#ff4f9d; font-family:'Pacifico', cursive;">✨ Welcome to Your Pink Wonderland ✨</h2>
+            <h3 style="font-weight:500; color:#ff6bb3; margin-top:10px; font-size:18px;">Everything today shines just for you 🎀</h3>
+
+            <div style="
+                margin-top:20px; padding:15px; background:#ffe9f4; border:2px dashed #ff8ac7; border-radius:15px; color:#d23c7b;
+            ">
+                <textarea placeholder="Tulis harapanmu di sini..." style="
+                    width:100%; height:100px; border:none; border-radius:10px; padding:10px; font-size:16px;
+                    font-family:'Segoe UI', sans-serif; resize:none; background:#fff0f7; color:#d23c7b;
+                "></textarea>
+            </div>
+        </div>
+
+        <!-- Footer Chat Bubble -->
+        <div style="margin-top:30px; text-align:center;">
+            <div style="
+                display:inline-block; background:#ffd1e8; color:#d23c7b; padding:15px 20px; border-radius:20px;
+                font-family:'Pacifico', cursive; font-size:18px; box-shadow:0 4px 8px rgba(0,0,0,0.15); max-width:90%; text-align:left;
+            ">
+                🎉 Happy Birthday manusia kuket, sayangnya Takull, ama Jaehyun. oh ya plis Stop ngajakin jajan dimsum mentai, es teler beserta teman temannya, gw bokek best 🎀
+            </div>
+        </div>
+    </div>
+
+    <!-- Animasi Pita -->
+    <script>
+        setInterval(() => {
+            let ribbon = document.createElement("div");
+            ribbon.innerHTML = "🎀";
+            ribbon.style.position = "fixed";
+            ribbon.style.bottom = "-10px";
+            ribbon.style.fontSize = "22px";
+            ribbon.style.left = Math.random() * 100 + "vw";
+            ribbon.style.opacity = 0.7;
+            ribbon.style.animation = "floatUp " + (3 + Math.random()*3) + "s linear infinite";
+            document.body.appendChild(ribbon);
+            setTimeout(() => ribbon.remove(), 6000);
+        }, 600);
+
+        // Keyframes animasi pita (dinamis via JS)
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes floatUp {
+                0% { transform: translateY(0); opacity:0.7; }
+                100% { transform: translateY(-120vh); opacity:0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
